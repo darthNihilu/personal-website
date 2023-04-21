@@ -1,0 +1,72 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./src"
+        ]
+      }
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "no-relative-import-paths",
+    "import"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "info",
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-plusplus": 0,
+    "max-classes-per-file": 0,
+    "camelcase": 0,
+    "no-alert": 0,
+    "no-underscore-dangle": 0,
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": "allow-with-description"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "radix": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "import/no-default-export": 1,
+    "no-case-declarations": 0,
+    "no-await-in-loop": 0,
+    "no-param-reassign": 0,
+    "no-nested-ternary": 0,
+    "default-case": 0,
+    "react/require-default-props": 0,
+    "class-methods-use-this": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "spaced-comment": 0,
+    "react/no-array-index-key": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
