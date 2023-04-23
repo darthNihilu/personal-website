@@ -1,19 +1,35 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import meImg from 'assets/images/me.jpg'
 import { Flex } from 'components/Flex'
-import { DefaultText } from 'components/Text'
+import { DefaultText } from 'components/DefaultText'
 import { Box } from 'components/Box'
 import { SkillItem } from 'content/LeftSide/components/SkillItem'
+import { useTranslation } from 'react-multi-lang'
+import { SocialLinks } from 'content/LeftSide/components/SocialLinks'
+
+const show = keyframes`
+  from {
+    left: -20%;
+  }
+  to {
+    left: 0;
+  }
+`
 
 const Container = styled(Flex)`
-  width: 305px;
-  background-color: #fff;
-  height: 1315px;
+  min-width: 305px;
+  background-color: ${({ theme }) => theme.additionBackgroundColor};
+  height: 100%;
   justify-content: flex-start;
-  padding: 50px 40px;
+  padding: 50px 40px 20px 40px;
   flex-direction: column;
   align-items: center;
+  border-radius: 0 0 12px 0;
+
+  position: relative;
+
+  animation: ${show} 1s ease-in-out forwards;
 `
 
 const Image = styled.img`
@@ -23,7 +39,7 @@ const Image = styled.img`
 `
 
 const TopContent = styled(Flex)`
-  padding-bottom: 25px;
+  padding-bottom: 16px;
   width: 100%;
   align-items: center;
   flex-direction: column;
@@ -55,17 +71,26 @@ const SkillItemContainer = styled(InfoContent)`
   }
 `
 
+const SkillsText = styled(DefaultText).attrs((props) => ({
+  variant: 'secondary',
+  ...props
+}))``
+
 export const LeftSide = () => {
+  const t = useTranslation()
   return (
     <Container>
       <TopContent>
         <Image src={meImg} alt="" />
-        <DefaultText mt="31px" fontSize="18px">
-          Andrei Zotov
+        <DefaultText mt="31px" fontSize="18px" fontWeight="500">
+          {t('name')}
         </DefaultText>
         <DefaultText variant="secondary" fontSize="15px" mt="8px">
           Front-End Developer
         </DefaultText>
+        <Box mt="16px">
+          <SocialLinks />
+        </Box>
       </TopContent>
       <InfoContent>
         <Flex justifyContent="space-between">
@@ -92,9 +117,25 @@ export const LeftSide = () => {
       </SkillItemContainer>
       <SkillItemContainer>
         <DefaultText fontSize="18px">Skills</DefaultText>
+        <SkillsText>HTML/CSS/JS</SkillsText>
+        <SkillsText>TypeScript</SkillsText>
+        <SkillsText>React/Redux/Redux Saga</SkillsText>
+        <SkillsText>Next.js</SkillsText>
+        <SkillsText>Node.js</SkillsText>
+        <SkillsText>Express</SkillsText>
+        <SkillsText>NestJS</SkillsText>
+        <SkillsText>Telegram API</SkillsText>
+        <SkillsText>PostgreSQL</SkillsText>
+        {/* <SkillItem title="HTML" percentage={90} />
+        <SkillItem title="CSS" percentage={90} />
+        <SkillItem title="JS" percentage={80} />
+        <SkillItem title="React" percentage={80} />*/}
       </SkillItemContainer>
-      <SkillItemContainer>
+      <SkillItemContainer style={{ borderBottom: 'none' }}>
         <DefaultText fontSize="18px">Extra Skills</DefaultText>
+        <SkillsText>Git/Github Actions/Gitlab CI</SkillsText>
+        <SkillsText>Docker</SkillsText>
+        <SkillsText>Nginx</SkillsText>
       </SkillItemContainer>
     </Container>
   )

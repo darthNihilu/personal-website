@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Flex } from 'components/Flex'
-import { DefaultText } from 'components/Text'
+import { DefaultText } from 'components/DefaultText'
 
 const Container = styled.div``
 
@@ -17,8 +17,20 @@ const PercentageContainer = styled.div`
   padding: 1px;
 `
 
+const changeWidth = (width: number) => keyframes`
+  from {
+    width: 0;
+  }
+  to {
+    width: ${width}%;
+  }
+`
+
 const Percentage = styled.div<{ percentage: number }>`
-  width: ${({ percentage }) => percentage}%;
+  animation: 1s ${({ percentage }) => changeWidth(percentage)} ease-in-out
+    forwards;
+  animation-delay: 1s;
+  width: 0;
   background-color: #ffb400;
   border-radius: 30px;
   height: 2px;

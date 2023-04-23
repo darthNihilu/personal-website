@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { ThemeType } from 'components/Theme'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -13,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #f0f0f6;
+    background-color: ${({ theme }: { theme: ThemeType }) =>
+      theme.backgroundColor};
   }
 
   ::-webkit-scrollbar {
