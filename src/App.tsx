@@ -18,6 +18,7 @@ import { useLanguageDetector } from 'hooks/useLanguageDetector'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { THEME_TYPES, themes } from 'components/Theme'
+import { useAnimationRemember } from 'hooks/useAnimationRemember'
 
 // Do this two lines only when setting up the application
 setTranslations({ en, ru })
@@ -68,6 +69,8 @@ const ThemeWrapper = ({ children }: any) => {
 
 function App() {
   // setLanguage('ru')
+
+  useAnimationRemember()
 
   useEffect(() => {
     const scrollToSectionWithId = () => {

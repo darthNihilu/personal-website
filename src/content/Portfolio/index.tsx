@@ -5,6 +5,7 @@ import { Box } from 'components/Box'
 import { PortfolioItem } from 'content/Portfolio/components/PortfolioItem'
 import { portfolioItems } from 'constants/constants'
 import { Flex } from 'components/Flex'
+import { useTranslation } from 'react-multi-lang'
 
 const show = keyframes`
   from {
@@ -34,10 +35,11 @@ const PortfolioItemsContainer = styled(Flex)`
 `
 
 export const Portfolio = () => {
+  const t = useTranslation()
   return (
     <Container id="portfolio">
       <DefaultText fontSize="32px" fontWeight="700" mb="40px">
-        Portfolio
+        {t('portfolio')}
       </DefaultText>
       <Flex justifyContent="center" alignItems="center">
         <PortfolioItemsContainer>

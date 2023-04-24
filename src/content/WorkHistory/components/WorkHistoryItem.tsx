@@ -10,6 +10,20 @@ const Container = styled(Box)`
   width: 100%;
   height: 100%;
   padding: 40px;
+
+  > div:first-child {
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      > div:first-child {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        > div:first-child {
+          text-align: center;
+        }
+      }
+    }
+  }
 `
 
 const FromToContainer = styled(DefaultText)`
@@ -33,7 +47,7 @@ export const WorkHistoryItem: React.FC<WorkHistoryItemType> = ({
     <Container>
       <Flex justifyContent="space-between">
         <Flex flexDirection="column">
-          <DefaultText fontSize="18px" fontWeight="500">
+          <DefaultText fontSize="18px" fontWeight="500" textAlign="left">
             {title}
           </DefaultText>
           <FromToContainer fontSize="18px" fontWeight="500" mt="8px">
@@ -63,6 +77,7 @@ export const WorkHistoryItem: React.FC<WorkHistoryItemType> = ({
             variant="secondary"
             mt="26px"
             // maxWidth="70%"
+            textAlign="justify"
           >
             {description}
           </DefaultText>

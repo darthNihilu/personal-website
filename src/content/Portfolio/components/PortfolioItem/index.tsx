@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Wrapper = styled(Box)`
   width: 410px;
   height: 250px;
-  background-color: aqua;
+  background-color: white;
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
@@ -26,7 +26,7 @@ const Wrapper = styled(Box)`
 const Container = styled(Box)<{ backgroundImageUrl: string }>`
   width: 410px;
   height: 250px;
-  background-color: aqua;
+  background-color: white;
   background-image: url(${({ backgroundImageUrl }) => backgroundImageUrl});
   background-size: cover;
   background-position: center;
@@ -73,7 +73,7 @@ export const PortfolioItem: React.FC<PortfolioItemType> = ({
         <DefaultText fontSize="32px" fontWeight={600}>
           {title}
         </DefaultText>
-        <DefaultText fontSize="26px" fontWeight={600}>
+        <DefaultText fontSize="20px" fontWeight={600} p="0 20px">
           {description}
         </DefaultText>
       </HoverContainer>

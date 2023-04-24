@@ -2,5 +2,23 @@
   "name": "Andrei Zotov",
   "introduction": "I'm Andrei Zotov",
   "frontEndDeveloper": "Front-End Developer",
-  "descriptionAboutMe": "Web-applications front-end developer with 4 years of experience. I have experience in commercial Development of both small and large projects. I am engaged in development Front-end part of web applications in the JavaScript language in conjunction with the React."
+  "descriptionAboutMe": "Web-applications front-end developer with 4 years of experience. I have experience in commercial Development of both small and large projects. I am engaged in development Front-end part of web applications in the JavaScript language in conjunction with the React.",
+  "age": "Age",
+  "residence": "Residence",
+  "russia": "Russia",
+  "currentLocation": "Current Location",
+  "belgrade": "Belgrade",
+  "languages": "Languages",
+  "russian": "Russian",
+  "english": "English",
+  "skills": "Skills",
+  "extraSkills": "Extra Skills",
+  "portfolio": "Portfolio",
+  "workHistory": "Work history",
+  "gravis": {
+    "participated": "Completed tasks within the project: \n\t- Full participation in team development, following GitFlow methodology; \n\t- Global layout changes according to layouts in Figma; \n\t- Implementing logic via Redux, Web3 and connecting smart contracts; \n\t- Integration with various crypto wallets; \n\t- Developing charts for exchange analytics; \n\t- Adding multilanguage system; \n\t- Working with SVG icons and their animations; \n\t- Using storybook for creating and testing uikit."
+  },
+  "frfi": {
+    "participated": "Completed tasks within the project: \n\t- Implementing logic via Redux, Web3 and connecting smart contracts; \n\t- Implemented switching between light and dark theme; \n\t- Full participation in team development, following GitFlow methodology; \n\t- Global layout changes according to layouts in Figma; \n\t- Integration with various crypto wallets; \n\t- Developing charts for different tokens; \n\t- Working with SVG icons and their animations; \n\t- Creating system with deep implementing redux and redux-thunk with redux persist.\n\t- Multiple underlying calculations for backend to keep the front load and work as fast as possible."
+  }
 }

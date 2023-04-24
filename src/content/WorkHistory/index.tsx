@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { DefaultText } from 'components/DefaultText'
-import { Flex } from 'components/Flex'
-import { portfolioItems, workHistoryItems } from 'constants/constants'
-import { PortfolioItem } from 'content/Portfolio/components/PortfolioItem'
+import { workHistoryItems } from 'constants/constants'
 import { Box } from 'components/Box'
 import { WorkHistoryItem } from 'content/WorkHistory/components/WorkHistoryItem'
+import { useTranslation } from 'react-multi-lang'
 
 const Container = styled(Box)`
   text-align: center;
@@ -19,10 +18,11 @@ const WorkHistoryContainer = styled(Box)`
 `
 
 export const WorkHistory = () => {
+  const t = useTranslation()
   return (
     <Container id="workHistory">
       <DefaultText fontSize="32px" fontWeight="700" mb="40px">
-        Work history
+        {t('workHistory')}
       </DefaultText>
       <WorkHistoryContainer>
         {workHistoryItems.map((item) => (

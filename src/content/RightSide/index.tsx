@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { Box } from 'components/Box'
-import { DefaultText } from 'components/DefaultText'
 import { Flex } from 'components/Flex'
 import { HomeIcon } from 'assets/svg-icons/Icons/HomeIcon'
 import { PortfolioIcon } from 'assets/svg-icons/Icons/PortfolioIcon'
 import { WorkHistoryIcon } from 'assets/svg-icons/Icons/WorkHistoryIcon'
-import { Link } from 'react-router-dom'
+import { AnimationWrapper } from 'components/AnimationWrapper'
+import { useLocation } from 'react-router-dom'
 
 const show = keyframes`
   from {
-    right: -20%;
+    right: -100%;
   }
   to {
     right: 0;
@@ -23,6 +23,10 @@ const Wrapper = styled(Box)`
   min-width: 108px;
 
   animation: ${show} 1s ease-in-out forwards;
+
+  @media screen and (max-width: 1315px) {
+    animation: none;
+  }
 `
 
 const Container = styled(Flex)`
@@ -35,17 +39,36 @@ const Container = styled(Flex)`
   flex-direction: column;
   justify-content: center;
 
-  > *:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (min-width: 1315px) {
+    > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1315px) {
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    background-color: transparent;
+    width: 100%;
+    padding: 0;
+
+    > *:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 `
 
 const IconWrapper = styled(Flex)<{ active?: boolean }>`
-  background-color: #f0f0f6;
+  background-color: ${({ theme }) => theme.rightSideIconBackground};
   border-radius: 100%;
   padding: 10px;
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   justify-content: center;
   align-items: center;
 
@@ -58,7 +81,8 @@ const IconWrapper = styled(Flex)<{ active?: boolean }>`
       ? 'background-color: #FFB400; cursor: default;'
       : css`
           :hover {
-            background-color: #dadae1;
+            background-color: ${({ theme }) =>
+              theme.rightSideIconBackgroundHover};
           }
         `}
 
@@ -70,11 +94,15 @@ const IconWrapper = styled(Flex)<{ active?: boolean }>`
 export const RightSide = () => {
   const [activeId, setActiveId] = useState('home')
 
+  const location = useLocation()
+
   const checkScrollPosition = () => {
     const offset = 200
     const home = document.getElementById('home') as any
     const portfolio = document.getElementById('portfolio') as any
     const works = document.getElementById('workHistory') as any
+
+    if (!home || !portfolio || !works) return
 
     const homeTop = home.getBoundingClientRect().top
     const portfolioTop = portfolio.getBoundingClientRect().top
@@ -99,23 +127,33 @@ export const RightSide = () => {
     }
   }, [])
 
+  useEffect(() => {
+    if (location.pathname !== '/') setActiveId('')
+  }, [location])
+
   return (
-    <Wrapper>
-      <Container>
-        <IconWrapper active={activeId === 'home'} as="a" href="#home">
-          <HomeIcon width="24px" height="24px" />
-        </IconWrapper>
-        <IconWrapper active={activeId === 'portfolio'} as="a" href="#portfolio">
-          <PortfolioIcon width="24px" height="24px" />
-        </IconWrapper>
-        <IconWrapper
-          active={activeId === 'workHistory'}
-          as="a"
-          href="#workHistory"
-        >
-          <WorkHistoryIcon width="24px" height="24px" />
-        </IconWrapper>
-      </Container>
-    </Wrapper>
+    <AnimationWrapper>
+      <Wrapper>
+        <Container>
+          <IconWrapper active={activeId === 'home'} as="a" href="/#home">
+            <HomeIcon width="24px" height="24px" />
+          </IconWrapper>
+          <IconWrapper
+            active={activeId === 'portfolio'}
+            as="a"
+            href="/#portfolio"
+          >
+            <PortfolioIcon width="24px" height="24px" />
+          </IconWrapper>
+          <IconWrapper
+            active={activeId === 'workHistory'}
+            as="a"
+            href="/#workHistory"
+          >
+            <WorkHistoryIcon width="24px" height="24px" />
+          </IconWrapper>
+        </Container>
+      </Wrapper>
+    </AnimationWrapper>
   )
 }
