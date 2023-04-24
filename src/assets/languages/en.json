@@ -20,5 +20,8 @@
   },
   "frfi": {
     "participated": "Completed tasks within the project: \n\t- Implementing logic via Redux, Web3 and connecting smart contracts; \n\t- Implemented switching between light and dark theme; \n\t- Full participation in team development, following GitFlow methodology; \n\t- Global layout changes according to layouts in Figma; \n\t- Integration with various crypto wallets; \n\t- Developing charts for different tokens; \n\t- Working with SVG icons and their animations; \n\t- Creating system with deep implementing redux and redux-thunk with redux persist.\n\t- Multiple underlying calculations for backend to keep the front load and work as fast as possible."
+  },
+  "erp": {
+    "participated": "Completed tasks within the project: \n\t- Refinement of the \"Tasks\" section, for setting, viewing, editing, and adding files to tasks by the users of the system; \n\t- Development of the \"Leads\" section, for the automated collection of requests from freelance exchanges and its further processing inside the company, using the self\n\t-written solution of pagination and filtration. \n\t- Development of messaging section using WebSockets; \n\t- Development of the \"Daily reports of the developer\" section about the work done for the day with pulling commits from the corporate server GitLab; \n\t- Development of the \"Users\" section for adding and editing users with different access roles; \n\t- Working with localStorage and cookie files to store the Redux state and data user authorization;"
   }
 }

@@ -7,6 +7,8 @@ import { Box } from 'components/Box'
 import { SkillItem } from 'content/LeftSide/components/SkillItem'
 import { useTranslation } from 'react-multi-lang'
 import { SocialLinks } from 'content/LeftSide/components/SocialLinks'
+import { Button } from 'components/Button'
+import { PdfFile } from 'assets/svg-icons/Icons/PdfFile'
 
 const show = keyframes`
   from {
@@ -19,6 +21,7 @@ const show = keyframes`
 
 const Container = styled(Flex)<{ active?: boolean }>`
   min-width: 305px;
+  max-width: 305px;
   background-color: ${({ theme }) => theme.additionBackgroundColor};
   height: fit-content;
   justify-content: flex-start;
@@ -102,6 +105,13 @@ const MobileAdaptiveContent = styled(Box)`
   }
 `
 
+const StyledButton = styled(Button)`
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+`
+
 const SkillsText = styled(DefaultText).attrs((props) => ({
   variant: 'secondary',
   ...props
@@ -172,6 +182,19 @@ export const LeftSide: React.FC<{ active?: boolean }> = ({ active }) => {
           <SkillsText>Nginx</SkillsText>
         </SkillItemContainer>
       </MobileAdaptiveContent>
+      <StyledButton width="100%">
+        <Flex alignItems="center">
+          <DefaultText
+            textTransform="uppercase"
+            fontWeight="600"
+            mr="12px"
+            style={{ whiteSpace: 'pre' }}
+          >
+            Download Resume
+          </DefaultText>
+          <PdfFile width="24px" height="24px" />
+        </Flex>
+      </StyledButton>
     </Container>
   )
 }

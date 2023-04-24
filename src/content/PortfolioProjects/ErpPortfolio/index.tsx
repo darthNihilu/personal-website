@@ -7,7 +7,6 @@ import { ThemeContext } from 'App'
 import { Flex } from 'components/Flex'
 import { SvgLink } from 'components/SvgLink'
 import { WebsiteIcon } from 'assets/svg-icons/Icons/WebsiteIcon'
-import { GithubIcon } from 'assets/svg-icons/Icons/GithubIcon'
 import { Separator } from 'components/Separator'
 import frfiBackground from 'assets/images/portfolio-items/frfi1.png'
 import frfiBackground2 from 'assets/images/portfolio-items/frfi2.png'
@@ -24,7 +23,7 @@ const Container = styled(Box)`
   margin-top: 50px;
 `
 
-export const FrfiPortfolio = () => {
+export const ErpPortfolio = () => {
   const { switchTheme } = useContext(ThemeContext)
   const t = useTranslation()
   useEffect(() => {
@@ -36,19 +35,13 @@ export const FrfiPortfolio = () => {
       <Box mt="50px">
         <Flex alignItems="center">
           <DefaultText fontSize="32px" fontWeight={700}>
-            FairFi
+            Sixhands ERP
           </DefaultText>
           <SvgLink
             component={WebsiteIcon}
             ml="16px"
-            href="https://frfi.io"
+            href="https://sixhands.co"
             title="Website"
-          />
-          <SvgLink
-            component={GithubIcon}
-            ml="8px"
-            href="https://gitlab.frfi.io/fairfi"
-            title="Github"
           />
         </Flex>
         <ImageSlider
@@ -64,33 +57,38 @@ export const FrfiPortfolio = () => {
           m="30px 0"
         />
         <DefaultText fontSize="22px" mt="16px" mb="12px" fontWeight={600}>
-          FairFi is a decentralized platform for investing in DeFi projects.
-          Based on autofarming with Safe Farming conditions.
+          An ERP system is a unified software platform that integrates diverse
+          business processes, streamlining operations and enhancing data-driven
+          decision-making across an organization.
         </DefaultText>
         <DefaultText>
-          Took part in the finalization of smart contracts based on the
-          mechanism of auto-investment (autofarming) of user funds through a
-          standard farming from different dexes. Created the system of creating
-          conditions for Safe Farming mechanism, which provides withdrawal or
-          deposit of user's funds depending on the price of one or another token
-          and suggests the possibility of splitting the deposited LP token into
-          two different ones. Also participated in creating a list of tokens
-          with the ability to view the history of price changes and the
-          implementation of AI token price prediction. Developed a system where
-          user token balances were taken from different chains. Developed
-          systems for approves and signatures to deposit any available user
-          token into the desired pool, as well as calculating the price impact
-          for the selected token.
+          I participated in the development of such a project as an ERP system,
+          which included primarily a Kanban task board that was divided into
+          different Workspaces that each user could create to distribute tasks
+          to specific projects. For the tasks themselves, it was possible to
+          assign an executor and a verifier, add comments, photos or videos, set
+          a priority and category, and set a deadline. There was also a user
+          page which displayed a list of all the tasks that had been set for it,
+          this page had filtering by all possible fields on the task with the
+          filters being saved when the page was reloaded. There was a section
+          with the user's daily reports, where each employee had to mark what he
+          did for the day and on which project. There was a Leads section where
+          advertisements from various freelance exchanges were delivered. It was
+          possible to generate estimates and communicate with the customer
+          through a single interface, also assigning managers to the taken
+          projects. There were also sections with users, where it was possible
+          to change all the data of a single user and a section with the
+          Knowledge Base of the company, where the most important articles were
+          located
         </DefaultText>
         <br />
         <DefaultText fontSize="16px">
-          <FormatTextComponent text={t('frfi.participated')} />
+          <FormatTextComponent text={t('erp.participated')} />
         </DefaultText>
         <br />
         <Separator mb="16px" mt="6px" />
         <DefaultText>
-          Technologies used: React, TypeScript, Redux, Redux-toolkit, Web3,
-          Solidity Smart-Contracts, Jest, Cypress, Recharts
+          Technologies used: React, Redux, SCSS, Styled-Components
         </DefaultText>
       </Box>
     </Container>

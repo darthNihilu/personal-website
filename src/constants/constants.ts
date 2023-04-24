@@ -16,6 +16,7 @@ export type PortfolioItemType = {
   backgroundImage: string
   href: string
   key: string
+  disabled?: boolean
 }
 
 export enum PORTFOLIO_KEYS {
@@ -49,14 +50,16 @@ export const portfolioItems: PortfolioItemType[] = [
     description:
       'Quick-access and editing system for monitoring and managing employee data',
     backgroundImage: kotelovBackgroundImage,
-    href: 'kotelov'
+    href: 'kotelov',
+    disabled: true
   },
   {
     key: PORTFOLIO_KEYS.INTERACTIVE_PLAYER,
     title: 'Interactive Player',
     description: 'A video player for playing interactive movies',
     backgroundImage: immersivePlayerBackgroundImage,
-    href: 'interactive-player'
+    href: 'interactive-player',
+    disabled: true
   },
   {
     key: PORTFOLIO_KEYS.ERP,

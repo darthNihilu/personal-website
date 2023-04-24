@@ -13,6 +13,7 @@ import { GravisPortfolio } from 'content/PortfolioProjects/GravisPortfolio'
 import { RightSide } from 'content/RightSide'
 import { Header } from 'content/Header'
 import { AnimationWrapper } from 'components/AnimationWrapper'
+import { ErpPortfolio } from 'content/PortfolioProjects/ErpPortfolio'
 
 const Container = styled(Flex)`
   @media screen and (min-width: 1315px) {
@@ -106,6 +107,14 @@ export const TopContent = () => {
               element={
                 <AdditionalContainer>
                   <GravisPortfolio />
+                </AdditionalContainer>
+              }
+            />
+            <Route
+              path={portfolioItemsByKey[PORTFOLIO_KEYS.ERP].href}
+              element={
+                <AdditionalContainer>
+                  <ErpPortfolio />
                 </AdditionalContainer>
               }
             />

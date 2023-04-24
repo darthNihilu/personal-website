@@ -1,12 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ChevronIcon } from 'assets/svg-icons/Icons/ChevronIcon'
+import { Box } from 'components/Box'
+import { SpaceProps } from 'styled-system'
 
-const Container = styled.div`
+const Container = styled(Box)`
   width: 100%;
   height: 720px;
   position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  background-color: ${({ theme }) => theme.additionBackgroundColor};
 `
 
 const ImageWrapper = styled.div<{ currentIndex: number }>`
@@ -59,7 +63,10 @@ const RightArrow = styled(Arrow)`
   }
 `
 
-export const ImageSlider: React.FC<{ images: string[] }> = ({ images }) => {
+export const ImageSlider: React.FC<{ images: string[] } & SpaceProps> = ({
+  images,
+  ...props
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevImage = () => {
@@ -81,7 +88,7 @@ export const ImageSlider: React.FC<{ images: string[] }> = ({ images }) => {
   }, [currentIndex, nextImage])
 
   return (
-    <Container>
+    <Container {...props}>
       <ImageWrapper currentIndex={currentIndex}>
         {images.map((image, index) => (
           <Image src={image} key={index} />

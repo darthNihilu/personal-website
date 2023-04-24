@@ -73,6 +73,7 @@ export const GravisPortfolio = () => {
             gravisBackground9,
             gravisBackground10
           ]}
+          m="30px 0"
         />
         {/*<Image src={gravisBackground} alt="gravis" />*/}
         <DefaultText fontSize="22px" mt="16px" mb="12px" fontWeight={600}>

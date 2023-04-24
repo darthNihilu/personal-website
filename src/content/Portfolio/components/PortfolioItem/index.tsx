@@ -6,11 +6,11 @@ import { DefaultText } from 'components/DefaultText'
 import { Flex } from 'components/Flex'
 import { Link } from 'react-router-dom'
 
-const Wrapper = styled(Box)`
+const Wrapper = styled(Box)<{ disabled?: boolean }>`
   width: 410px;
   height: 250px;
   background-color: white;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
   overflow: hidden;
   border-radius: 12px;
   text-decoration: none;
@@ -64,10 +64,11 @@ export const PortfolioItem: React.FC<PortfolioItemType> = ({
   title,
   description,
   backgroundImage,
-  href
+  href,
+  disabled
 }) => {
   return (
-    <Wrapper as={Link} to={href}>
+    <Wrapper as={disabled ? '' : Link} to={href} disabled={disabled}>
       <Container backgroundImageUrl={backgroundImage} className="container" />
       <HoverContainer>
         <DefaultText fontSize="32px" fontWeight={600}>
