@@ -16,6 +16,10 @@ const Wrapper = styled(Box)<{ disabled?: boolean }>`
   text-decoration: none;
   position: relative;
 
+  @media screen and (max-width: 420px) {
+    width: 340px;
+  }
+
   :hover {
     .container {
       transform: scale(1.3);
@@ -35,6 +39,10 @@ const Container = styled(Box)<{ backgroundImageUrl: string }>`
   border-radius: 12px;
   text-decoration: none;
   transition: transform 300ms ease-in-out;
+
+  @media screen and (max-width: 420px) {
+    width: 340px;
+  }
 `
 
 const HoverContainer = styled(Flex)`

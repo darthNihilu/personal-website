@@ -36,6 +36,7 @@ const Container = styled(Flex)<{ active?: boolean }>`
   animation: ${show} 1s ease-in-out forwards;
 
   @media screen and (max-width: 1315px) {
+    max-width: 100%;
     transition: left 300ms ease-in-out;
     animation: none;
     position: absolute;
@@ -182,19 +183,25 @@ export const LeftSide: React.FC<{ active?: boolean }> = ({ active }) => {
           <SkillsText>Nginx</SkillsText>
         </SkillItemContainer>
       </MobileAdaptiveContent>
-      <StyledButton width="100%">
-        <Flex alignItems="center">
-          <DefaultText
-            textTransform="uppercase"
-            fontWeight="600"
-            mr="12px"
-            style={{ whiteSpace: 'pre' }}
-          >
-            Download Resume
-          </DefaultText>
-          <PdfFile width="24px" height="24px" />
-        </Flex>
-      </StyledButton>
+      <a
+        href="/Resume Andrei Zotov.pdf"
+        target="_blank"
+        style={{ textDecoration: 'none', width: '100%' }}
+      >
+        <StyledButton width="100%">
+          <Flex alignItems="center">
+            <DefaultText
+              textTransform="uppercase"
+              fontWeight="600"
+              mr="12px"
+              style={{ whiteSpace: 'pre' }}
+            >
+              {t('downloadResume')}
+            </DefaultText>
+            <PdfFile width="24px" height="24px" />
+          </Flex>
+        </StyledButton>
+      </a>
     </Container>
   )
 }

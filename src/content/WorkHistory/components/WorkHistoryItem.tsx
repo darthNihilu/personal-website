@@ -4,6 +4,7 @@ import { WorkHistoryItemType } from 'constants/constants'
 import { Box } from 'components/Box'
 import { DefaultText } from 'components/DefaultText'
 import { Flex } from 'components/Flex'
+import { useTranslation } from 'react-multi-lang'
 
 const Container = styled(Box)`
   background-color: white;
@@ -43,6 +44,7 @@ export const WorkHistoryItem: React.FC<WorkHistoryItemType> = ({
   description,
   fromTo
 }) => {
+  const t = useTranslation()
   return (
     <Container>
       <Flex justifyContent="space-between">
@@ -79,7 +81,7 @@ export const WorkHistoryItem: React.FC<WorkHistoryItemType> = ({
             // maxWidth="70%"
             textAlign="justify"
           >
-            {description}
+            {t(`portfolioItems.${description}`)}
           </DefaultText>
         </Flex>
       </Flex>

@@ -8,13 +8,17 @@ import { Flex } from 'components/Flex'
 import { SvgLink } from 'components/SvgLink'
 import { WebsiteIcon } from 'assets/svg-icons/Icons/WebsiteIcon'
 import { Separator } from 'components/Separator'
-import frfiBackground from 'assets/images/portfolio-items/frfi1.png'
-import frfiBackground2 from 'assets/images/portfolio-items/frfi2.png'
-import frfiBackground3 from 'assets/images/portfolio-items/frfi3.png'
-import frfiBackground4 from 'assets/images/portfolio-items/frfi4.png'
-import frfiBackground5 from 'assets/images/portfolio-items/frfi5.png'
-import frfiBackground6 from 'assets/images/portfolio-items/frfi6.png'
-import frfiBackground7 from 'assets/images/portfolio-items/frfi7.png'
+import erpBackground from 'assets/images/portfolio-items/erp1.png'
+import erpBackground2 from 'assets/images/portfolio-items/erp2.png'
+import erpBackground3 from 'assets/images/portfolio-items/erp3.png'
+import erpBackground4 from 'assets/images/portfolio-items/erp4.png'
+import erpBackground5 from 'assets/images/portfolio-items/erp5.png'
+import erpBackground6 from 'assets/images/portfolio-items/erp6.png'
+import erpBackground7 from 'assets/images/portfolio-items/erp7.png'
+import erpBackground8 from 'assets/images/portfolio-items/erp8.png'
+import erpBackground9 from 'assets/images/portfolio-items/erp9.png'
+import erpBackground10 from 'assets/images/portfolio-items/erp10.png'
+import erpBackground11 from 'assets/images/portfolio-items/erp11.png'
 import { ImageSlider } from 'components/ImageSlider'
 import { useTranslation } from 'react-multi-lang'
 import { FormatTextComponent } from 'components/FormatTextComponent'
@@ -46,13 +50,17 @@ export const ErpPortfolio = () => {
         </Flex>
         <ImageSlider
           images={[
-            frfiBackground,
-            frfiBackground2,
-            frfiBackground3,
-            frfiBackground4,
-            frfiBackground5,
-            frfiBackground6,
-            frfiBackground7
+            erpBackground,
+            erpBackground2,
+            erpBackground3,
+            erpBackground4,
+            erpBackground5,
+            erpBackground6,
+            erpBackground7,
+            erpBackground8,
+            erpBackground9,
+            erpBackground10,
+            erpBackground11
           ]}
           m="30px 0"
         />

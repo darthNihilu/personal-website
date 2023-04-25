@@ -11,6 +11,10 @@ const Container = styled(Box)`
   overflow: hidden;
   border-radius: 12px;
   background-color: ${({ theme }) => theme.additionBackgroundColor};
+
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
 `
 
 const ImageWrapper = styled.div<{ currentIndex: number }>`

@@ -14,6 +14,13 @@ const Container = styled.button<any>`
     `text-transform: ${textTransform};`} @media screen and(max-width: 768 px) {
     font-size: ${({ mobileSize }) => (mobileSize ? mobileSize + 'px' : '')};
   }
+
+  transition: background-color 300ms ease-in-out;
+
+  :hover {
+    background-color: #ffc84b;
+  }
+
   ${typography}
 `
 

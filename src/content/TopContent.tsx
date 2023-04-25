@@ -80,7 +80,7 @@ export const TopContent = () => {
               path="/"
               element={
                 <>
-                  <AnimationWrapper>
+                  <AnimationWrapper width="100%">
                     <CenterSide />
                   </AnimationWrapper>
                   <Box mt="70px">
