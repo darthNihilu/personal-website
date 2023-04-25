@@ -40,6 +40,11 @@
     </script>
   </head>
   <body>
+  <script type="text/javascript">
+    if(localStorage.getItem('lang') === null) {
+      localStorage.setItem('lang', navigator?.languages?.includes('ru') ? 'ru' : 'en');
+    }
+  </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
