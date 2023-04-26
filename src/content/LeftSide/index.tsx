@@ -5,7 +5,7 @@ import { Flex } from 'components/Flex'
 import { DefaultText } from 'components/DefaultText'
 import { Box } from 'components/Box'
 import { SkillItem } from 'content/LeftSide/components/SkillItem'
-import { useTranslation } from 'react-multi-lang'
+import { getLanguage, useTranslation } from 'react-multi-lang'
 import { SocialLinks } from 'content/LeftSide/components/SocialLinks'
 import { Button } from 'components/Button'
 import { PdfFile } from 'assets/svg-icons/Icons/PdfFile'
@@ -120,6 +120,7 @@ const SkillsText = styled(DefaultText).attrs((props) => ({
 
 export const LeftSide: React.FC<{ active?: boolean }> = ({ active }) => {
   const t = useTranslation()
+  const currentLanguage = getLanguage()
   return (
     <Container active={active}>
       <TopContent>
@@ -184,7 +185,11 @@ export const LeftSide: React.FC<{ active?: boolean }> = ({ active }) => {
         </SkillItemContainer>
       </MobileAdaptiveContent>
       <a
-        href="/Resume Andrei Zotov.pdf"
+        href={
+          currentLanguage === 'en'
+            ? '/Resume Andrei Zotov.pdf'
+            : '/Резюме - Андрей Зотов.pdf'
+        }
         target="_blank"
         style={{ textDecoration: 'none', width: '100%' }}
       >

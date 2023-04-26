@@ -44,7 +44,7 @@ export const Portfolio = () => {
       <Flex justifyContent="center" alignItems="center">
         <PortfolioItemsContainer>
           {portfolioItems.map((item) => (
-            <PortfolioItem {...item} />
+            <PortfolioItem id={item.key} {...item} />
           ))}
         </PortfolioItemsContainer>
       </Flex>

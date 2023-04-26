@@ -5,6 +5,7 @@ import { PortfolioItemType } from 'constants/constants'
 import { DefaultText } from 'components/DefaultText'
 import { Flex } from 'components/Flex'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-multi-lang'
 
 const Wrapper = styled(Box)<{ disabled?: boolean }>`
   width: 410px;
@@ -68,13 +69,14 @@ const HoverContainer = styled(Flex)`
   }
 `
 
-export const PortfolioItem: React.FC<PortfolioItemType> = ({
+export const PortfolioItem: React.FC<PortfolioItemType & { id: string }> = ({
   title,
-  description,
+  id,
   backgroundImage,
   href,
   disabled
 }) => {
+  const t = useTranslation()
   return (
     <Wrapper as={disabled ? '' : Link} to={href} disabled={disabled}>
       <Container backgroundImageUrl={backgroundImage} className="container" />
@@ -83,7 +85,7 @@ export const PortfolioItem: React.FC<PortfolioItemType> = ({
           {title}
         </DefaultText>
         <DefaultText fontSize="20px" fontWeight={600} p="0 20px">
-          {description}
+          {t(`portfolioItemsDescriptions.${id}`)}
         </DefaultText>
       </HoverContainer>
     </Wrapper>

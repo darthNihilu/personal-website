@@ -12,7 +12,6 @@ import { MailIcon } from 'assets/svg-icons/Icons/MailIcon'
 
 export type PortfolioItemType = {
   title: string
-  description: string
   backgroundImage: string
   href: string
   key: string
@@ -32,23 +31,18 @@ export const portfolioItems: PortfolioItemType[] = [
   {
     key: PORTFOLIO_KEYS.FRFI,
     title: 'FairFi',
-    description: 'AI-powered yield farming',
     backgroundImage: frfiBackgroundImage,
     href: 'frfi'
   },
   {
     key: PORTFOLIO_KEYS.GRAVIS,
     title: 'Gravis Finance',
-    description:
-      'An ecosystem that unites DeFi platform, NFT marketplace, and Evervoid game',
     backgroundImage: gravisBackgroundImage,
     href: 'gravis'
   },
   {
     key: PORTFOLIO_KEYS.KOTELOV,
     title: 'Complex monitoring system',
-    description:
-      'Quick-access and editing system for monitoring and managing employee data',
     backgroundImage: kotelovBackgroundImage,
     href: 'kotelov',
     disabled: true
@@ -56,7 +50,6 @@ export const portfolioItems: PortfolioItemType[] = [
   {
     key: PORTFOLIO_KEYS.INTERACTIVE_PLAYER,
     title: 'Interactive Player',
-    description: 'A video player for playing interactive movies',
     backgroundImage: immersivePlayerBackgroundImage,
     href: 'interactive-player',
     disabled: true
@@ -64,14 +57,12 @@ export const portfolioItems: PortfolioItemType[] = [
   {
     key: PORTFOLIO_KEYS.ERP,
     title: 'ERP',
-    description: 'Enterprise resource planning (ERP) for organization',
     backgroundImage: erpBackgroundImage,
     href: 'erp'
   },
   {
     key: PORTFOLIO_KEYS.TELEGRAM_BOTS,
     title: 'Telegram bots',
-    description: 'List of pet projects built on Telegram API',
     backgroundImage: telegramBotsBackgroundImage,
     href: 'telegram-bots',
     disabled: true
