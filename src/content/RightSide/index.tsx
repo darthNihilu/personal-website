@@ -7,6 +7,7 @@ import { PortfolioIcon } from 'assets/svg-icons/Icons/PortfolioIcon'
 import { WorkHistoryIcon } from 'assets/svg-icons/Icons/WorkHistoryIcon'
 import { AnimationWrapper } from 'components/AnimationWrapper'
 import { useLocation } from 'react-router-dom'
+import { LanguageSwitcher } from 'components/LanguageSwitcher'
 
 const show = keyframes`
   from {
@@ -37,10 +38,11 @@ const Container = styled(Flex)`
   height: 100vh;
   align-items: center;
   flex-direction: column;
+  //justify-content: space-between;
   justify-content: center;
 
   @media screen and (min-width: 1315px) {
-    > *:not(:last-child) {
+    > div > *:not(:last-child) {
       margin-bottom: 32px;
     }
   }
@@ -53,7 +55,7 @@ const Container = styled(Flex)`
     width: 100%;
     padding: 0;
 
-    > *:not(:last-child) {
+    > div > *:not(:last-child) {
       margin-right: 32px;
     }
   }
@@ -135,23 +137,27 @@ export const RightSide = () => {
     <AnimationWrapper>
       <Wrapper>
         <Container>
-          <IconWrapper active={activeId === 'home'} as="a" href="/#home">
-            <HomeIcon width="24px" height="24px" />
-          </IconWrapper>
-          <IconWrapper
-            active={activeId === 'portfolio'}
-            as="a"
-            href="/#portfolio"
-          >
-            <PortfolioIcon width="24px" height="24px" />
-          </IconWrapper>
-          <IconWrapper
-            active={activeId === 'workHistory'}
-            as="a"
-            href="/#workHistory"
-          >
-            <WorkHistoryIcon width="24px" height="24px" />
-          </IconWrapper>
+          {/*<LanguageSwitcher />*/}
+          <Flex flexDirection="column">
+            <IconWrapper active={activeId === 'home'} as="a" href="/#home">
+              <HomeIcon width="24px" height="24px" />
+            </IconWrapper>
+            <IconWrapper
+              active={activeId === 'portfolio'}
+              as="a"
+              href="/#portfolio"
+            >
+              <PortfolioIcon width="24px" height="24px" />
+            </IconWrapper>
+            <IconWrapper
+              active={activeId === 'workHistory'}
+              as="a"
+              href="/#workHistory"
+            >
+              <WorkHistoryIcon width="24px" height="24px" />
+            </IconWrapper>
+          </Flex>
+          {/*<div />*/}
         </Container>
       </Wrapper>
     </AnimationWrapper>

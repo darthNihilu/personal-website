@@ -9,6 +9,7 @@ import React from 'react'
 import { UpWorkIcon } from 'assets/svg-icons/Icons/UpWorkIcon'
 import { TelegramIcon } from 'assets/svg-icons/Icons/TelegramIcon'
 import { MailIcon } from 'assets/svg-icons/Icons/MailIcon'
+import { GithubIcon } from 'assets/svg-icons/Icons/GithubIcon'
 
 export type PortfolioItemType = {
   title: string
@@ -85,6 +86,13 @@ export type SocialLinkType = {
 }
 
 export const socialLinks: SocialLinkType[] = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/darthNihilu',
+    icon: GithubIcon,
+    width: 16,
+    height: 16
+  },
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/andrei-zotov-b162511b8/',
