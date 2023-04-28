@@ -55,6 +55,10 @@ const Container = styled(Flex)`
     width: 100%;
     padding: 0;
 
+    > div {
+      flex-direction: row;
+    }
+
     > div > *:not(:last-child) {
       margin-right: 32px;
     }
