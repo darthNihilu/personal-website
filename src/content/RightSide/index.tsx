@@ -7,7 +7,6 @@ import { PortfolioIcon } from 'assets/svg-icons/Icons/PortfolioIcon'
 import { WorkHistoryIcon } from 'assets/svg-icons/Icons/WorkHistoryIcon'
 import { AnimationWrapper } from 'components/AnimationWrapper'
 import { useLocation } from 'react-router-dom'
-import { LanguageSwitcher } from 'components/LanguageSwitcher'
 
 const show = keyframes`
   from {
