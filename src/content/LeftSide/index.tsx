@@ -20,8 +20,8 @@ const show = keyframes`
 `
 
 const Container = styled(Flex)<{ active?: boolean }>`
-  min-width: 305px;
-  max-width: 305px;
+  min-width: 365px;
+  max-width: 365px;
   background-color: ${({ theme }) => theme.additionBackgroundColor};
   height: fit-content;
   justify-content: flex-start;

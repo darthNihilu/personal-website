@@ -40,7 +40,7 @@ const Container = styled(Box)`
     }
   }
 
-  @media screen and (max-width: 1726px) {
+  @media screen and (max-width: 1960px) {
     width: 100%;
   }
 

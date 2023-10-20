@@ -25,11 +25,10 @@ export enum PORTFOLIO_KEYS {
   KOTELOV = 'kotelov',
   INTERACTIVE_PLAYER = 'interactivePlayer',
   ERP = 'erp',
-  TELEGRAM_BOTS = 'telegramBots'
+  TELEGRAM_BOTS = 'telegramBots',
 }
 
-export const portfolioItems: PortfolioItemType[] = [
-  {
+export const portfolioItems: PortfolioItemType[] = [{
     key: PORTFOLIO_KEYS.FRFI,
     title: 'FairFi',
     backgroundImage: frfiBackgroundImage,
@@ -136,10 +135,17 @@ export type WorkHistoryItemType = {
 export const workHistoryItems: WorkHistoryItemType[] = [
   {
     title: 'Middle Front-End Developer',
+    company: 'SPIKS',
+    site: 'https://spiks.ru',
+    description: 'spiks',
+    fromTo: 'May 2023 - Now'
+  },
+  {
+    title: 'Middle Front-End Developer',
     company: 'FairFi',
     site: 'https://frfi.io',
     description: 'frfi',
-    fromTo: 'Jul 2022 - April 2022'
+    fromTo: 'Jul 2022 - April 2023'
   },
   {
     title: 'Middle Front-End Developer',

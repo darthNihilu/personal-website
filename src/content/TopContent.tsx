@@ -30,7 +30,7 @@ const Container = styled(Flex)`
 const AdditionalContainer = styled(Box)`
   width: 1250px;
 
-  @media screen and (max-width: 1726px) {
+  @media screen and (max-width: 1960px) {
     width: 100%;
   }
 `
