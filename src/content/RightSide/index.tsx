@@ -1,12 +1,12 @@
-import {HomeIcon} from 'assets/svg-icons/Icons/HomeIcon'
-import {PortfolioIcon} from 'assets/svg-icons/Icons/PortfolioIcon'
-import {WorkHistoryIcon} from 'assets/svg-icons/Icons/WorkHistoryIcon'
-import {AnimationWrapper} from 'components/AnimationWrapper'
-import {Box} from 'components/Box'
-import {Flex} from 'components/Flex'
-import React, {useEffect, useState} from 'react'
-import {useLocation} from 'react-router-dom'
-import styled, {css, keyframes} from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import styled, { css, keyframes } from 'styled-components'
+import { Box } from 'components/Box'
+import { Flex } from 'components/Flex'
+import { HomeIcon } from 'assets/svg-icons/Icons/HomeIcon'
+import { PortfolioIcon } from 'assets/svg-icons/Icons/PortfolioIcon'
+import { WorkHistoryIcon } from 'assets/svg-icons/Icons/WorkHistoryIcon'
+import { AnimationWrapper } from 'components/AnimationWrapper'
+import { useLocation } from 'react-router-dom'
 
 const show = keyframes`
   from {

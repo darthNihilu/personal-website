@@ -109,7 +109,7 @@ export const socialLinks: SocialLinkType[] = [
   },
   {
     name: 'Telegram',
-    href: 'https://t.me/adronim',
+    href: 'https://t.me/zotovprog',
     icon: TelegramIcon,
     width: 16,
     height: 16,
